@@ -1,0 +1,12 @@
+<h1Index des projets  <%= @Project.count %> </h1>
+
+
+<% for project in @projects %>
+    <article class="">
+
+        <%= @project.title %>
+        <%= @project.description %>
+        <%= @project.language %>
+
+    </article>
+<% end %>
