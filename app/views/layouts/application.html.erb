@@ -8,7 +8,23 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= render 'layouts/partials/header' %>
+
+  <%= render 'layouts/partials/flash' %>
+
+<div class="row">
+<div class="col-sm-2 lateral">
+
+    <%= render 'layouts/partials/nav' %>
+    <%= render 'layouts/partials/footer' %>
+
+</div>
+<div class="col-sm-8">
+
+    <%= yield %>
+
+</div>
+</div>
 
 </body>
 </html>

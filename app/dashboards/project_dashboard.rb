@@ -12,6 +12,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     title: Field::String,
     description: Field::Text,
     language: Field::String,
+    image: PaperclipField,
     slug: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -26,6 +27,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :description,
+    :image,
     :language,
   ]
 
@@ -37,6 +39,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     :description,
     :language,
     :slug,
+    :image,
     :created_at,
     :updated_at,
   ]
@@ -49,6 +52,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     :description,
     :language,
     :slug,
+    :image,
   ]
 
   # Overwrite this method to customize how projects are displayed

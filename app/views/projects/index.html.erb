@@ -1,12 +1,21 @@
-<h1Index des projets  <%= @Project.count %> </h1>
+<h1> Index des projets  (<%= Project.count %>) </h1>
 
 
-<% for project in @projects %>
-    <article class="">
 
-        <%= @project.title %>
-        <%= @project.description %>
-        <%= @project.language %>
+<% @projects.in_groups_of(3, false).each do |group| %>
+  <div class="row">
+    <% group.each do |project| %>
+      <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+              <%= image_tag project.image.url(:medium), alt: project.title %>
+              <div class="caption">
+                <h2> <%= project.title %></h2>
+                <p> <%= truncate(project.description, length: 150) %> </p>
+                <p><%= link_to "Voir ce projet", projects_path(project.slug), class: "btn btn-primary", role: "button" %> <%= link_to "lien Github", projects_path(project.slug), class: "btn btn-primary", role: "button" %></p>
 
-    </article>
-<% end %>
+              </div>
+          </div>
+      </div>
+      <% end  %>
+  </div>
+<% end  %>
