@@ -13,6 +13,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     description: Field::Text,
     language: Field::String,
     image: PaperclipField,
+    link: Field::String,
     slug: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -28,6 +29,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     :title,
     :description,
     :image,
+    :link,
     :language,
   ]
 
@@ -37,6 +39,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :description,
+    :link,
     :language,
     :slug,
     :image,
@@ -50,6 +53,7 @@ class ProjectDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :title,
     :description,
+    :link,
     :language,
     :slug,
     :image,
@@ -57,8 +61,8 @@ class ProjectDashboard < Administrate::BaseDashboard
 
   # Overwrite this method to customize how projects are displayed
   # across all pages of the admin dashboard.
-  #
-  # def display_resource(project)
-  #   "Project ##{project.id}"
-  # end
+  
+  def display_resource(project)
+    "Project ##{project.id}"
+  end
 end
