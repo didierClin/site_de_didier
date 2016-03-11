@@ -5,25 +5,25 @@
         <%= link_to "Portfolio Projets", root_path %>
       </div>
       <nav class="collapse navbar-collapse navbar-ex1-collapse">
-        < % if user_signed_in? %>
+        <% if user_signed_in? %>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              < %= link_to "Compte",  edit_user_registration_path %>
+              <%= link_to "Compte",  edit_user_registration_path %>
             </li>
             <li>
-              < %= link_to "Deconnexion",  destroy_user_session_path, :method => :delete %>
+              <%= link_to "Deconnexion",  destroy_user_session_path, :method => :delete %>
             </li>
           </ul>
-          < % else %>
+          <%else %>
             <ul class="nav navbar-nav pull-right">
               <li>
-                < %= link_to "S'inscrire",  new_user_registration_path %>
+                <%= link_to "S'inscrire",  new_user_registration_path %>
               </li>
               <li>
-                < %= link_to "Log In",  new_user_session_path %>
+                <%= link_to "Log In",  new_user_session_path %>
               </li>
             </ul>
-            < % end %>
+            <%end %>
       </nav>
     </div>
   </div>
