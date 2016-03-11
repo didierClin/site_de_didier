@@ -36,6 +36,8 @@ gem 'administrate', '~> 0.1.4'
 # creer un fichier de variables d environnement
 gem 'dotenv-rails', '~> 2.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.5'
+#font awesome
+gem 'font-awesome-sass', '~> 4.5.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
