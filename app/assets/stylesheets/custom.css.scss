@@ -18,9 +18,7 @@ body {
 .nav-bar {
   padding-top: 30px;
 }
-.glyphicon-link {
-    font-size: 1.2em;
-}
+
 .title {
   text-align: center;
   h1 {
@@ -36,4 +34,36 @@ body {
   font-size: 2em;
   color: green;
   vertical-align: bottom;
+}
+
+
+.thumbnail {
+  height: 300px;
+  overflow: hidden;
+}
+
+.content {
+  margin-left: 8%;
+  /*font-family: 'Megrim', cursive;*/
+  font-family: 'Oleo Script', cursive;
+    position: relative
+}
+.boutBas {
+  position: absolute;
+  bottom: 0;
+}
+
+// footer
+header .rights p{
+    color: #454545;
+    font-family: "raleway-regular", arial;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 16px;
+}
+
+header .rights a{
+    font-family: "raleway-bold", arial;
+    font-weight: bold;
+    text-decoration: none;
 }

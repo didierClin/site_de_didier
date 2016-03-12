@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SiteDeDidier</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -19,7 +20,7 @@
     <%= render 'layouts/partials/footer' %>
 
 </div>
-<div class="col-sm-8">
+<div class="col-sm-9">
 
     <%= yield %>
 
