@@ -1,0 +1,27 @@
+"id","fonction","order","date","entite","description","tags","image_file_name","image_content_type","image_file_size","image_updated_at","created_at","updated_at","resume","genre"
+"1","Entrepreneur Individuel","0","2011 à mars 2015","","Entrepreneur Individuel en profession libéral.","","3.png","image/png","12650","2016-03-13 11:55:44.383870","2016-03-13 11:55:28.431767","2016-03-13 12:10:02.528986","","exp"
+"2","Administrateur Oracle Business Suite 11i","1","1999 à 2011","Capgemini Lille","Administration d'instances Oracle et Oracle Applications v10.7 à v11i sous Oracle 7.3 à 11g en environnements développement et pre-production,
+Administration système des serveurs Unix,
+Installation et migration des instances,
+Sauvegardes et restaurations,
+Clonage des instances OA 11i,
+Optimisation des traitements par scripts,
+tuning","oracle, base de données, dba, unix, sauvegarde, restauration","logo3.jpg","image/jpeg","4061","2016-03-13 12:03:15.590568","2016-03-13 12:03:15.649648","2016-03-13 12:12:42.458560","DBA sur projets clients et interne","exp"
+"3","DBA Junior","2","mars à octobre 1999","Capgemini Lille","Evolution vers Oracle 7.3.4 et la version 10.7 d’Oracle Applications Migration des spécifiques client,
+paramétrages et optimisation des traitements par scripts.","oracle, oracle applications, dba, ","OA.png","image/png","6883","2016-03-13 12:15:14.599947","2016-03-13 12:15:14.680318","2016-03-13 12:15:14.680318","Affecté au pôle migration de la BU Oracle de Capgemini en qualité DBA Junior.","exp"
+"4","Ingénieur de Développement","3","1998 à 1999","Capgemini Lille","Modules GL, AP, AR, et AX d’Oracle Applications v10.7 ,
+Contrôle de conformité et intégration en environnement type client,
+Vérifications des pré-requis, paramétrage, tests d’intégration et de non-régression,
+Elaboration de kits de livraisons (programmes d’installation par patchs automatisés en scripts shell et PL/SQL),
+Utilisation des outils de conduite de tests Win Runner et Test Director de MERCURY et QA RUN de COMPUWARE.","tests, intégration, oracle, oracle applications","logo3.png","image/png","15029","2016-03-13 12:20:06.597439","2016-03-13 12:20:06.673960","2016-03-13 12:20:06.673960","Validation de livrables spécifiques au sein de l'équipe intégration du projet finance international d’un grand compte régional","exp"
+"5","Maintenicien en instruments de bord","4","1989 à 1994","AERO-France (Paris- le Bourget) / Flandre Air (Lille)","Maintenance, contrôle et dépannage des installations électriques, électroniques et de navigation,
+Dépannage autonome hors base,
+gestion des moyens techniques et humains dans les dépannages à distance,
+Habilité à autoriser la remise en service avion après intervention.","aéronautique,","","","","","2016-03-13 12:23:44.729206","2016-03-13 12:23:44.729206","Assurer la disponibilité d’une flotte d’avions de ligne.","exp"
+"6","Etudiant métiers développement numérique","0","Octobre 2015 à Avril 2016","Simplon Roubaix","Formation intensive aux métiers de développeur, travail en environnement linux, serveur vps dédié, https, nginx
+","Ruby, RoR, Ruby on rails, rails, html, html5, css, css3, javascript, bootstrap, foundation, git, github, atom, linux","Logo-Simplon-Roubaix300.jpeg","image/jpeg","24345","2016-03-13 13:36:58.795143","2016-03-13 13:34:44.086205","2016-03-13 13:36:58.849625","","form"
+"7","EUDIL / POLYTECH'LILLE","1","1998","EUDIL / POLYTECH'LILLE","Diplôme  de l’Ecole Universitaire d’Ingénieur de Lille, EUDIL,
+             Option: Informatique.","POLYTECH'LILLE, ingénieur, EUDIL","088.jpg","image/jpeg","2638","2016-03-13 13:40:54.066237","2016-03-13 13:40:54.114919","2016-03-13 13:40:54.114919","EUDIL / POLYTECH'LILLE","form"
+"8","Formation d'administrateur base de données oracle","2","2001 à 2011","ORACLE University, Paris","Formations d'administrateur base de données oracle 9i, 10g.,
+             Performance Tuning,
+             Oracle 9iAS","oracle, 9i, 10g, tuning, 9iAS","oracle.jpg","image/jpeg","6000","2016-03-13 13:44:22.952225","2016-03-13 13:43:28.588116","2016-03-13 13:44:23.011746","Formation d'administrateur base de données oracle","form"

@@ -1,0 +1,5 @@
+Modules GL, AP, AR, et AX d’Oracle Applications v10.7 ,
+Contrôle de conformité et intégration en environnement type client,,
+Vérifications des pré-requis, paramétrage, tests d’intégration et de non-régression.,
+Elaboration de kits de livraisons (programmes d’installation par patchs automatisés en scripts shell et PL/SQL).,
+Utilisation des outils de conduite de tests Win Runner et Test Director de MERCURY et QA RUN de COMPUWARE

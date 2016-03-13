@@ -1,0 +1,11 @@
+"id","title","description","language","slug","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","link"
+"1","CheatSheet VIM","Création d'un cheatSheet sur l'éditeur de texte VI/VIM. Réalisé en pur css3/HTML5","CSS3/HTML5","cheatsheet-vim","2016-03-10 22:54:49.506360","2016-03-13 11:20:22.970123","088.jpg","image/jpeg","2638","2016-03-10 22:54:49.441747","http://didierclin.github.io/cheatSheet_vim/"
+"2","Goooogle","Objet du projet:
+
+Réalisation d'une page google like en pur HTML/CSS","CSS3/HTML5","goooogle","2016-03-10 23:45:15.068488","2016-03-13 11:20:44.744179","gooogle.png","image/png","51106","2016-03-10 23:45:14.965813","http://didierclin.github.io/goooogle/"
+"3","Le canard","Création d'un site intégrant une image cliquable. Le canard est inspiré du site Le Bon Coin (coin!)
+
+L'objectif est de mettre en place une carte avec des zones cliquables menant à des cibles distinctes.","CSS3/HTML5","le-canard","2016-03-10 23:56:07.412529","2016-03-13 11:19:04.090620","le_canard.png","image/png","73900","2016-03-10 23:56:07.293471","http://didierclin.github.io/leCanard"
+"4","Blog rails","Site de blogging réalisé sous ruby on rails et déployé sur Heroku.
+Gestion des utilisateurs","Ruby_on_rails","blog-rails","2016-03-11 09:04:18.437601","2016-03-13 11:22:42.508556","default.png","image/png","411815","2016-03-11 09:43:13.079193","https://proj03.herokuapp.com/"
+"5","Sample App Rails 4","SIte from ""Ruby on Rails Tutorial (3rd Ed.) Learn Web Development with Rails"" from Michael Hartl. Le site se construit il est sous SSL ","Ruby_on_rails","sample-app-rails-4","2016-03-13 11:26:56.691362","2016-03-13 11:28:47.351627","logo-tuto.png","image/png","46942","2016-03-13 11:28:15.056199","https://sample-app-didier.herokuapp.com/"
