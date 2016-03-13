@@ -22,6 +22,7 @@ body {
 .title {
   text-align: center;
   h1 {
+    font-family: 'Cinzel', serif;
     margin-bottom: 20px;
     color: white;
   }
@@ -38,7 +39,7 @@ body {
 
 
 .thumbnail {
-  height: 300px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -66,4 +67,8 @@ header .rights a{
     font-family: "raleway-bold", arial;
     font-weight: bold;
     text-decoration: none;
+}
+.jumbotron{
+  background-color: rgba(128, 167, 204, 0.6);
+  padding-right: 10px;
 }

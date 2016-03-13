@@ -1,0 +1,55 @@
+<h1>Retrouvez mon CV</h1>
+
+
+
+<div class="row jumbotron">
+  <div class="col-md-1 lateral">
+      F <br>O <br>R <br>M <br>A <br>T <br>I <br>O <br>N <br>
+  </div>
+  <div class="col-md-11">
+
+      <% @formations.each do |f| %>
+        <h2><%= f.fonction %> </h2>
+        <div class="row thumbnail">
+          <div class="col-sm-3">
+
+              <%= image_tag f.image.url(:thumb), alt: f.fonction  %><br>
+
+          </div>
+          <div class="col-sm-9">
+
+              <p>
+
+                  <%= f.entite %><br>
+                  <%= f.date %> <br>
+                  <%= f.description %>
+
+              </p>
+
+          </div>
+        </div>
+      <% end %>
+
+  </div>
+</div>
+
+<div class="row jumbotron">
+  <div class="hidden-xs col-sm-1 lateral">
+      E <br> X<br> P<br> E<br> R<br> I<br> E<br> N<br> C<br> E<br>/<br>
+      P <br>R<br>O<br>F<br>E<br>S<br>S<br>I<br>O<br>N<br>N<br>E<br>L<br>L<br>E
+  </div>
+  <div class="col-sm-10">
+
+      <% @ExpProfs.each do |exp| %>
+      <p>
+
+            <%= exp.order %><br>
+            <%= exp.fonction %> <br>
+            <%= exp.date %> <br>
+            <%= exp.description %>
+
+      </p>
+      <% end %>
+
+  </div>
+</div>

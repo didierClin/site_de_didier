@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'cv'  => 'element#show'
+
   devise_for :users
   root 'pages#index'
 
