@@ -1,0 +1,13 @@
+<h1>Index Files for blog</h1>
+
+<% @posts.each do |post| %>
+<div class="post_wrapper">
+  <h2 class="title">
+
+    <%= link_to  post.title, post%>
+    <p>
+      <%= post.created_at.strftime("%d, %B, %Y") %>
+    </p>
+  </h2>
+</div>
+<% end %>

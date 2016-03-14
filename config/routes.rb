@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :posts
+  
   get 'cv'  => 'element#show'
 
   devise_for :users
