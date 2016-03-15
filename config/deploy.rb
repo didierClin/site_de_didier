@@ -9,7 +9,7 @@ set :deploy_to, '/home/deploy/site_de_didier'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-set :linked_files, %w{config/database.yml config/secrets.yml}
+set :linked_files, %w{config/database.yml config/secrets.yml .env.production}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 
