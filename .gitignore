@@ -19,3 +19,4 @@
 #ignore db file
 config/database.yml
 config/secrets.yml
+.env.development
