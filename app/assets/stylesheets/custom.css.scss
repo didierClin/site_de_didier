@@ -16,8 +16,18 @@ body {
   background-size: cover;
 }
 
+.navbar-brand{
+      color: #684020;
+      font-weight: bold;
+      &:hover{ color: white;}
+}
+
+#msgAcc {
+
+}
 /* make sidebar nav vertical */
-@media (min-width: 768px) {
+@media (min-width: 1008px) {
+  .icon-bar {color: #181818;}
   .sidebar-nav{
       font-family: 'Cinzel', serif;
 
@@ -25,7 +35,8 @@ body {
        left: 0;
        top: 0;
        height: 100%;
-       background: rgb(70, 227, 166);
+       background: #687072;
+      //  background: rgb(70, 227, 166);
 
        border-right: 2px solid #d6dce0;
   }
@@ -44,12 +55,13 @@ body {
   .sidebar-nav .navbar li {
     float: none;
     display: block;
-         font-weight: 700;
-         font-size: 0.8em;
+     font-weight: 700;
+     font-size: 0.8em;
   }
   .sidebar-nav .navbar li a {
     padding-top: 12px;
     padding-bottom: 12px;
+    color: #D5B572;
   }
 }
 

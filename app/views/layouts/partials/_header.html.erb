@@ -2,14 +2,17 @@
   <div class="navbar-inner">
     <div class="container">
       <div id="logo" class="navbar-brand">
-        <%= link_to "Accueil", root_path %>
+        <% if current_page?(root_path) %>
+            <p>Page d'accueil</p>
+        <% elsif current_page?(posts_path) %>
+          <p> <%= link_to "Nouveau post",  new_post_path %></p>
+        <% else %>
+         <p>  <%= link_to "Retour à l'accueil", root_path %></p>
+        <% end %>
       </div>
       <nav class="collapse navbar-collapse navbar-ex1-collapse">
         <% if user_signed_in? %>
           <ul class="nav navbar-nav navbar-right">
-            <li>
-              <%= link_to "Nouveau post",  new_post_path %>
-            </li>
             <li>
               <%= link_to "Compte",  edit_user_registration_path %>
             </li>

@@ -5,9 +5,17 @@
 <p class="date">
   Soumis il y a <%= time_ago_in_words(@post.created_at) %>
   | <%= link_to "Editer", edit_post_path(@post), class: "btn btn-primary" %>
-  | <%= link_to "Supprimer", post_path(@post), method: :delete, data: { confirm: 'Etes vous sur?'}, class: "btn btn-primary" %>
+  | <%= link_to "Supprimer", post_path(@post), method: :delete, data: { confirm: 'Etes vous sur?'}, class: "btn btn-warning" %>
 </p>
-
-<p class="">
-  <%= @post.body %>
-</p>
+<h3>
+    <p class="well">
+      <%= @post.body %>
+    </p>
+</h3>
+<div id="comments">
+    <h3>  <%= @post.comments.count %> commentaire(s)  </h3>
+    <h4>Ajouter un commentaire:</h4>
+    <h4 class="text">  <%= render 'comments/form' %>    </h4>
+</div>
+<%= link_to 'Montrer', @post %> |
+<%= link_to 'Retour', posts_path %>
