@@ -4,6 +4,8 @@
 
 <p class="date">
   Soumis il y a <%= time_ago_in_words(@post.created_at) %>
+  | <%= link_to "Editer", edit_post_path(@post), class: "btn btn-primary" %>
+  | <%= link_to "Supprimer", post_path(@post), method: :delete, data: { confirm: 'Etes vous sur?'}, class: "btn btn-primary" %>
 </p>
 
 <p class="">

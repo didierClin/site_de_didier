@@ -1,3 +1,4 @@
+@import 'normalize';
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Cinzel:700);
@@ -15,9 +16,44 @@ body {
   background-size: cover;
 }
 
-.nav-bar {
-  padding-top: 30px;
+/* make sidebar nav vertical */
+@media (min-width: 768px) {
+  .sidebar-nav{
+      font-family: 'Cinzel', serif;
+
+       position: fixed;
+       left: 0;
+       top: 0;
+       height: 100%;
+       background: rgb(70, 227, 166);
+
+       border-right: 2px solid #d6dce0;
+  }
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    // Separe head from first nav item
+    padding-top: 80px;
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+         font-weight: 700;
+         font-size: 0.8em;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }
+
+
 
 .title {
   text-align: center;
@@ -28,7 +64,7 @@ body {
   }
 }
 
-/* side bar */
+/* title letters for CV page */
 .lateral {
   text-align: center;
   font-family: 'Cinzel', serif;
@@ -39,7 +75,7 @@ body {
 
 
 .thumbnail {
-  height: 250px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -55,6 +91,7 @@ body {
 }
 
 // footer
+
 header .rights p{
     color: #454545;
     font-family: "raleway-regular", arial;

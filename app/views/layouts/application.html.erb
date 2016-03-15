@@ -9,18 +9,17 @@
 </head>
 <body>
 
-  <%= render 'layouts/partials/header' %>
 
   <%= render 'layouts/partials/flash' %>
 
-<div class="row">
-<div class="col-sm-2 lateral">
+<div class="row clearfix">
+<div class="col-sm-3 col-lg-2 lateral">
 
-    <%= render 'layouts/partials/nav' %>
-    <%= render 'layouts/partials/footer' %>
+  <%= render 'layouts/partials/nav' %>
 
 </div>
-<div class="col-sm-9">
+<div class="col-sm-9 col-lg-10">
+  <%= render 'layouts/partials/header' %>
 
     <%= yield %>
 
