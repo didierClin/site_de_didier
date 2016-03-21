@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get 'projects/show'
 
+  get 'link' => 'pages#link'
+
   namespace :admin do
     resources :projects
     resources :elements

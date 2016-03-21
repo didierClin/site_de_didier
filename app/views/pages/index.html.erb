@@ -1,5 +1,5 @@
 <% provide(:title, "Accueil") %>
-<h1>PortFolio de Didier CLIN</h1>
+<h1>PortFolio de Didier CLIN</h1><br>
 <h2 class="title">Developpeur Junior Rails</h2>
 
 <div class="container">
@@ -7,12 +7,12 @@
     <div class="row">
     <div id="msgAcc" class="col-sm-offset-1 col-sm-9 well">
 
-        <p >Bonjour et bienvenue sur mon site. Il est dédié à présenter mon parcours depuis une année et durant laquelle j'ai choisi de réorienter mon parcours professionnel vers le developpement web. Le site se construit sur une architecture Ruby on Rails. </p>
+        <p >Bonjour et bienvenue sur mon site. Il est dédié à présenter mon parcours depuis une année durant laquelle j'ai choisi de réorienter mon parcours professionnel vers le developpement web. Le site se construit sur une architecture Ruby on Rails. </p>
         <p>Pourquoi, Rails? Simplement parce que c'est le framework retenu dans le cadre de la formation SIMPLON en terme de back-end. Simplon a été pour moi l'opportunité de me plonger dans cet univers riche et passionnant du WEB que j'ai abordé il y a tout juste un an au travers d'un CMS Joomla. Ne pouvant pas me contenter de ce type de framework, j'ai ensuite abordé Angularjs.  </p>
         <p>
 
          Prochainement, je vais y déployer mes projets réalisés dans le cadre de la formation Simplon. Vous pouvez déjà y trouver quelques liens et l'ébauche de mon CV.</p>
-    </div>
+    </div><br>
     <div class="row">
         <div class="col-sm-3 panel thumbnail">
           HTML/CSS
@@ -28,8 +28,8 @@
     </div>
 
 
-      < %=  link_to 'Hymn', {controller: 'static_pages', action: 'watch', v: 'YykjpeuMNEk' } %><br>
-      < %=  link_to 'Ma playlist', {controller: 'static_pages', action: 'watch', v: 'fIyFgygYW7s', list: 'PLCD98DDA3C0E406F7' } %>
+      <%=  link_to 'Hymn', {controller: 'pages', action: 'link', v: 'YykjpeuMNEk' } %><br>
+      <%=  link_to 'Ma playlist', {controller: 'pages', action: 'link', v: 'fIyFgygYW7s', list: 'PLCD98DDA3C0E406F7' } %>
       <p>la suite</p>
 
 </div>

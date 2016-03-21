@@ -27,10 +27,11 @@ body {
 }
 /* make sidebar nav vertical */
 @media (min-width: 1008px) {
-  .icon-bar {color: #181818;}
+  .icon-bar {
+    color: #181818;
+    font-family: 'Cinzel', serif;
+  }
   .sidebar-nav{
-      font-family: 'Cinzel', serif;
-
        position: fixed;
        left: 0;
        top: 0;
@@ -62,6 +63,9 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     color: #D5B572;
+    &:hover {
+      color: #322c2c;
+    }
   }
 }
 
@@ -83,11 +87,12 @@ body {
   font-size: 2em;
   color: green;
   vertical-align: bottom;
+  text-shadow:  5px 5px 5px #888888;
 }
 
 
 .thumbnail {
-  height: 300px;
+  height: 320px;
   overflow: hidden;
 }
 
