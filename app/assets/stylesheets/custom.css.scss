@@ -15,6 +15,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+ /* Header */
+
+
+#msgAcc {
+
+}
+/* make sidebar nav vertical */
 
 .navbar-brand{
       color: #684020;
@@ -22,10 +29,6 @@ body {
       &:hover{ color: white;}
 }
 
-#msgAcc {
-
-}
-/* make sidebar nav vertical */
 @media (min-width: 1008px) {
   .icon-bar {
     color: #181818;
@@ -87,13 +90,15 @@ body {
   font-size: 2em;
   color: green;
   vertical-align: bottom;
-  text-shadow:  5px 5px 5px #888888;
+  text-shadow:  5px 5px 5px #888;
 }
 
 
 .thumbnail {
   height: 320px;
   overflow: hidden;
+  background-color: #f0f0f0;
+  box-shadow:  5px 5px 5px #888;
 }
 
 .content {

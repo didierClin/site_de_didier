@@ -4,8 +4,8 @@
 
 <p class="date">
   Soumis il y a <%= time_ago_in_words(@post.created_at) %>
-  | <%= link_to "Editer", edit_post_path(@post), class: "btn btn-primary" %>
-  | <%= link_to "Supprimer", post_path(@post), method: :delete, data: { confirm: 'Etes vous sur?'}, class: "btn btn-warning" %>
+  | <%= link_to "Editer", edit_post_path(@post), class: "btn btn-primary btn-xs" %>
+  | <%= link_to "Supprimer", post_path(@post), method: :delete, data: { confirm: 'Etes vous sur?'}, class: "btn btn-warning btn-xs" %>
 </p>
 <h3>
     <p class="well">
@@ -14,6 +14,11 @@
 </h3>
 <div id="comments">
     <h3>  <%= @post.comments.count %> commentaire(s)  </h3>
+    <div class="well">
+
+      <%= render @post.comments %>
+    </div>
+
     <h4>Ajouter un commentaire:</h4>
     <h4 class="text">  <%= render 'comments/form' %>    </h4>
 </div>
