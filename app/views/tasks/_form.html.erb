@@ -1,7 +1,7 @@
 <%= simple_form_for @task, remote: true do |f| %>
   <%= f.input :description, label: 'A faire', as: :text%>
   <%= f.input :deadline, label: 'Echéance',   as: :datetimepicker %>
-  <%= f.button :submit 'Enregistrer' %>
+  <%= f.button :submit, label: 'Enregistrer' %>
 <% end %>
 
 <!-- <%= form_for @task, remote: true do |f| %>
