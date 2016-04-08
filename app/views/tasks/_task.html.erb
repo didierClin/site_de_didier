@@ -1,0 +1,17 @@
+<li class="list-group-item list-group-item-info">
+  <%= task.description %>
+
+  <span class="deadline"><%= task.deadline %></span>
+
+  <span class="edit">
+    <%= link_to edit_task_path(task), remote: true do %>
+      <button class="btn btn-default btn-xs">Editer</button>
+    <% end %>
+
+
+    <%= link_to task, remote: true, method: :delete,
+        data: { confirm: 'Confirmer la suppression?' } do %>
+      <button class="btn btn-danger btn-xs">Supprimer</button>
+    <% end %>
+  </span>
+</li>

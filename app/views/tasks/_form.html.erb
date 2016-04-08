@@ -1,0 +1,30 @@
+<%= simple_form_for @task, remote: true do |f| %>
+  <%= f.input :description, label: 'A faire', as: :text%>
+  <%= f.input :deadline, label: 'Echéance',   as: :datetimepicker %>
+  <%= f.button :submit 'Enregistrer' %>
+<% end %>
+
+<!-- <%= form_for @task, remote: true do |f| %>
+<% if @task.errors.any? %>
+  <div id="errors">
+    <h2><%= pluralize(@task.errors.count, "erreur") %> ont empeche l'enregistrement de cette tache.</h2>
+    <ul>
+      <% @task.errors.full_messages.each do |mesg| %>
+          <li><%= mesg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+  <p>
+    <%= f.label :tache %>
+    <%= f.text_field :description, class: "form-control" %>
+  </p>
+  <p>
+    <%= f.label :echeance %>
+    <%= f.text_field :deadline, class: "form-control" %>
+  </p>
+  <p>
+    <%= f.submit 'Soumettre'%>
+  </p>
+
+<% end %> -->

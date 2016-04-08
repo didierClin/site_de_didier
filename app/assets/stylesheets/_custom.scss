@@ -103,3 +103,12 @@ a {
        border-right: 2px solid #d6dce0;
   }
 }
+#tasks, .deadline { padding-left: 15px; }
+
+.edit {
+  float: right;
+  padding-right: 10px;
+}
+//==============================
+// Todo App - TASKS
+#task-form { padding-bottom: 15px; }

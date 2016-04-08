@@ -4,6 +4,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  get 'todo' => 'tasks#index'
+  resources :tasks
+
   get 'cv'  => 'element#show'
 
   devise_for :users
