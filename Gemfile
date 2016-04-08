@@ -38,10 +38,10 @@ gem 'dotenv-rails', '~> 2.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.5'
 #font awesome
 gem 'font-awesome-sass', '~> 4.5.0'
-gem 'momentjs-rails', '~> 2.5.0'
-gem 'bootstrap3-datetimepicker-rails', '~> 3.0.0.1'
-gem 'simple_form', '~> 3.1.0.rc1'
-gem 'responders', '~> 2.0'
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
+gem 'simple_form'
+gem 'responders'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
