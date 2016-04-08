@@ -9,6 +9,7 @@ class ProjectDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    order: Field::Number,
     title: Field::String,
     description: Field::Text,
     language: Field::String,
@@ -37,6 +38,7 @@ class ProjectDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
+    :order,
     :title,
     :description,
     :link,
@@ -51,6 +53,7 @@ class ProjectDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :order,
     :title,
     :description,
     :link,
@@ -61,7 +64,7 @@ class ProjectDashboard < Administrate::BaseDashboard
 
   # Overwrite this method to customize how projects are displayed
   # across all pages of the admin dashboard.
-  
+
   def display_resource(project)
     "Project ##{project.id}"
   end

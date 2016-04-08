@@ -1,27 +1,30 @@
 <h1 class="title">
   <%= @post.title %>
 </h1>
-
-<p class="date">
-  Soumis il y a <%= time_ago_in_words(@post.created_at) %>
-  | <%= link_to "Editer", edit_post_path(@post), class: "btn btn-primary btn-xs" %>
-  | <%= link_to "Supprimer", post_path(@post), method: :delete, data: { confirm: 'Etes vous sur?'}, class: "btn btn-warning btn-xs" %>
-</p>
+<br>
 <h3>
     <p class="well">
       <%= @post.body %>
     </p>
 </h3>
+<p class="date">
+  Soumis il y a <%= time_ago_in_words(@post.created_at) %>
+  | <%= link_to "Editer", edit_post_path(@post), class: "btn btn-primary btn-xs" %>
+  | <%= link_to "Supprimer", post_path(@post), method: :delete, data: { confirm: 'Etes vous sur?'}, class: "btn btn-warning btn-xs" %>
+</p>
 <div id="comments">
-    <h3>  <%= @post.comments.count %> commentaire(s)  </h3>
+  <% if  @post.comments.count != 0 %>
+    <h3>  <%= @post.comments.count %> commentaires  </h3>
     <div class="commentaire">
-
+      <!-- appel de la forme comments -->
        <%= render @post.comments %>
-
     </div>
-
     <h4>Ajouter un commentaire:</h4>
-    <h4 class="text">  <%= render 'comments/form' %>    </h4>
+    <% else %>
+      <h4 class="nocomment">Soyez le premier à laisser un commentaire:</h4>
+
+    <% end %>
+    <h4 class="text">  <%= render 'comments/form' %></h4><br>
+    <%= link_to 'Montrer', @post %> |
+    <%= link_to 'Retour', posts_path %>
 </div>
-<%= link_to 'Montrer', @post %> |
-<%= link_to 'Retour', posts_path %>

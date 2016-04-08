@@ -4,12 +4,12 @@
   <nav class="navbar nav-default" role="navigation">
 
     <div class = "navbar-header">
-       <button type = "btn btn-primary" class = "navbar-toggle"
+       <button type = "btn btn-default" class = "navbar-toggle"
           data-toggle = "collapse" data-target = "#navbar-collapse">
           <span class = "sr-only">Toggle navigation</span>
-          <span class = "icon-bar"></span>
-          <span class = "icon-bar"></span>
-          <span class = "icon-bar"></span>
+          <span class = "icon-bar">menu</span>
+          <!-- <span class="icon-bar"></span>
+          <span class = "icon-bar"></span> -->
        </button>
 
        <a class = "navbar-brand" href="<%= root_path %> ">PortFolio Didier</a><br>
@@ -38,10 +38,59 @@
 
           </li>
           <li> <%= link_to 'Mon CV', cv_path %></li>
+
           <li> <%= link_to 'Admin', admin_projects_path %></li>
       </ul>
 
     </div>
-
+    <div class="menu-wrap">
+      <nav class="menu-top">
+        <div class="profile"><img src="images/didier.png" alt="Didier CLIN"/><span>Matthew Greenberg</span></div>
+        <div class="icon-list">
+          <a href="#"><i class="fa fa-fw fa-star-o"></i></a>
+          <a href="#"><i class="fa fa-fw fa-bell-o"></i></a>
+          <a href="#"><i class="fa fa-fw fa-envelope-o"></i></a>
+          <a href="#"><i class="fa fa-fw fa-comment-o"></i></a>
+        </div>
+      </nav>
+      <nav class="menu-side">
+        <a href="#">Recent Stories</a>
+        <a href="#">Reading List</a>
+        <a href="#">My Stories</a>
+        <a href="#">Categories</a>
+      </nav>
+    </div>
+    <button class="menu-button" id="open-button">Open Menu</button>
+    <div id="bas" >
+       <div>
+            <% if user_signed_in? %>
+                <ul class="fa-stack">
+                       <li><%= link_to current_user.email, edit_user_registration_path, class: "fa-stack fa-cog", 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Mon compte" %></li>
+                       <li><%= link_to 'Deconnexion', destroy_user_session_path, method: :delete , class: "fa-stack fa-cog", 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Mon compte" %></li>
+                </ul>
+            <%else %>
+                  <ul class="fa-stack">
+                       <li><%= link_to '', new_user_registration_path, class: "fa fa-pencil-square-o", title: "S'inscrire" %></li>
+                       <li><%= link_to '', new_user_session_path, class: "fa fa-sign-in fa-2x", title: "Se connecter" %></li>
+                  </ul>
+            <%end %>
+       </div>
+       <div class="share-results">
+          <a class="fa-stack fa-1x" data-toggle="tooltip" title="Email" data-placement="top" href="#">
+              <i class="fa fa-envelope-square fa-stack-2x"></i>
+          </a>
+          <a class="fa-stack fa-1x" data-toggle="tooltip" title="Facebook" data-placement="top" href="">
+              <i class="fa fa-facebook-square fa-stack-2x"></i>
+          </a>
+          <a class="fa-stack fa-1x" data-toggle="tooltip" title="Twitter" data-placement="top" href="">
+              <i class="fa fa-twitter-square fa-stack-2x"></i>
+              <!-- <i class="fa fa-twitter fa-stack-1x"></i> -->
+          </a>
+          <a class="fa-stack fa-1x" data-toggle="tooltip" title="Share by Link" data-placement="top" href="#">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-inverse fa-link fa-stack-1x"></i>
+          </a>
+      </div>
+    </div>
   </nav>
 </div>

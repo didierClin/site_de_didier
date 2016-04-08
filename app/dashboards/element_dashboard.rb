@@ -9,6 +9,7 @@ class ElementDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    order: Field::Number,
     genre: Field::String,
     fonction: Field::String,
     resume: Field::String,

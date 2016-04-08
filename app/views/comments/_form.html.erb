@@ -1,12 +1,12 @@
 <%=  form_for([@post, @post.comments.build]) do |f| %>
 
-<p>
-  <%= f.label :commentaire %>
-  <%= f.text_field :name %>
+<p class="form_group">
+  <%= f.label :titre %>
+  <%= f.text_field :name, class: "form-control" %>
 </p>
-<p>
-  <%= f.label :contenu %>
-  <%= f.text_area :body %>
+<p class="form_group">
+  <%= f.label :message %>
+  <%= f.text_area :body, class: "form-control" %>
 </p>
 <p>
   <%= f.submit 'Soumettre'%>

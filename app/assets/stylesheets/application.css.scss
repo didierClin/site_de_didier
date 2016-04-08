@@ -10,6 +10,14 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+ *  = re quire_tree .
+ *  = re quire_self
  */
+ @import 'normalize';
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import url(https://fonts.googleapis.com/css?family=Cinzel:700);
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+@import "custom"
