@@ -12,21 +12,22 @@
 <body>
 
 
-  <%= render 'layouts/partials/flash' %>
 
 <!-- <div class="row">
 <div class="col-sm-2 col-lg-2 lateral"> -->
 
   <%= render 'layouts/partials/nav' %>
 
+  <%= render 'layouts/partials/flash' %>
 <!-- </div> -->
 <!-- <div class="col-sm-10 col-lg-10 clearfix"> -->
   <!-- <%= render 'layouts/partials/header' %> -->
-<div id="main" class="container">
+<div id="main" class="container clearfix">
     <%= yield %>
 </div>
 <!-- </div>
 </div> -->
 
+<%= render 'layouts/partials/footer' %>
 </body>
 </html>

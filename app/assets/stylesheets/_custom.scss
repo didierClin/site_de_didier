@@ -2,14 +2,24 @@
 $font-stack:    Cinzel, sans-serif;
 $primary-color: #684020;
 $fond-color: rgba(190, 179, 105, 0.38);
-$color-link: #181818;
-$color-hover: #D5B572;
+$color-link: #D5B572;
+$color-hover: #181818;
 $color-linkBG: #322c2c;
 
+/*============================*/
+/*      Small device first    */
+/*============================*/
 /* universal */
+
 body {
+  padding-top: 0;
   font: 100% $font-stack;
-  color: $primary-color;
+  background-image: url(/images/fond-eiffel.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
 }
 
 // CSS For links
@@ -20,34 +30,26 @@ a {
     color: $color-hover;
   }
 }
-//
-.menu-top {
-	line-height: 58px;
-}
+ /* Header */
 
-.menu-top .profile {
-	display: inline-block;
-	padding: 8px 10px;
-	line-height: 42px;
-}
+/* make sidebar nav vertical */
 
-.menu-top .profile,
-.menu-side {
-	width: 300px;
-}
-
-.menu-top .profile img {
-	float: left;
-	margin-right: 1em;
+.navbar-brand{
+      color: #684020;
+      font-weight: bold;
+      &:hover{ color: white;}
 }
 
 //==============================
 // Navigation from small devices
 .sidebar-nav {
+  position: absolute;
   display: block;
-  max-width: 15% ;
-  float: left;
-  background-color: $fond-color;
+  width: 100%;
+  // background-color: $fond-color;
+  z-index: 11;
+// height: 100%;
+// background: #373a47;
 }
 
 .navbar-brand{
@@ -59,56 +61,133 @@ a {
   color: #fff;
   background-color: $primary-color;
 }
-// position of left footer
-#bas {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: auto;
-      z-index: 5;
-      border: 3px solid #73AD21;
-}
 
-// font-awesome social link
-.fa-stack {
-   margin: -2px 0;
-   font-size:0.75em;
-   &:hover { color: white;}
+@media (min-width: 768px) {
+  .icon-bar {
+     color: #181818;
+     font-family: 'Cinzel', serif;
+   }
+   .sidebar-nav{
+        position: fixed;
+        float: left;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: #687072;
+       //  background: rgb(70, 227, 166);
+        max-width: 15%;
+        border-right: 2px solid #d6dce0;
+   }
+   .sidebar-nav .navbar .navbar-collapse {
+     padding: 0;
+     max-height: none;
+   }
+   .sidebar-nav .navbar ul {
+     float: none;
+     // Separe head from first nav item
+     padding-top: 80px;
+   }
+   .sidebar-nav .navbar ul:not {
+     display: block;
+   }
+   .sidebar-nav .navbar li {
+     float: none;
+     display: block;
+      font-weight: 700;
+      font-size: 0.8em;
+   }
+   .sidebar-nav .navbar li a {
+     padding-top: 12px;
+     padding-bottom: 12px;
+     color: #D5B572;
+     &:hover {
+       color: #322c2c;
+     }
+   }
+   .fa-stack {
+      margin:  20px 2px;
+      font-size: 1.5em;
+    }
  }
 
-//==============================
-// Navigation to medium devices
-#main {
-  float: right;
-  max-width: 85%
-}
 
-//==============================
-// Navigation to medium devices
-@media (min-width: 699px) {
-  .sidebar-nav {
-    // display: block;
-    max-width: 15% ;
-    float: left;
-    background-color: $fond-color;
+
+ .title {
+   text-align: center;
+   h1 {
+     font-family: 'Cinzel', serif;
+     margin-bottom: 20px;
+     color: white;
+   }
+ }
+
+ /* title letters for CV page */
+ .lateral {
+   text-align: center;
+   font-family: 'Cinzel', serif;
+   font-size: 2em;
+   color: green;
+   vertical-align: bottom;
+   text-shadow:  5px 5px 5px #888;
+ }
+
+
+ .thumbnail {
+   height: 320px;
+   overflow: hidden;
+   background-color: #f0f0f0;
+   box-shadow:  5px 5px 5px #888;
+ }
+
+ .content {
+   margin-left: 8%;
+   /*font-family: 'Megrim', cursive;*/
+   font-family: 'Oleo Script', cursive;
+     position: relative
+ }
+ .boutBas {
+   position: absolute;
+   bottom: 0;
+ }
+
+// position of left footer
+#bas {
+  z-index: 101;
+  background-color: #000;
+  display: inline;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #D5B572;
+  p {
+    margin-top: 1%;
+    float: right;
   }
-  .sidebar-nav{
-       position: fixed;
-       left: 0;
-       top: 0;
-       height: 100%;
-       background: #687072;
-      //  background: rgb(70, 227, 166);
-
-       border-right: 2px solid #d6dce0;
+  // font-awesome social link
+  .fa-stack {
+    margin:  1% 0;
+    font-size: 1em;
+    &:hover { color: white;}
   }
 }
-#tasks, .deadline { padding-left: 15px; }
 
-.edit {
-  float: right;
-  padding-right: 10px;
-}
-//==============================
-// Todo App - TASKS
-#task-form { padding-bottom: 15px; }
+
+ header .rights p{
+     color: #450045;
+     font-family: "raleway-regular", arial;
+     font-size: 11px;
+     letter-spacing: 1px;
+     line-height: 16px;
+ }
+
+ header .rights a{
+     font-family: "raleway-bold", arial;
+     font-weight: bold;
+     text-decoration: none;
+ }
+
+ .jumbotron{
+   background-color: rgba(128, 167, 204, 0.6);
+   padding-right: 10px;
+ }

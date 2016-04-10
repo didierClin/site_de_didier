@@ -1,0 +1,120 @@
+// Variables used along the site
+$font-stack:    Cinzel, sans-serif;
+$primary-color: #684020;
+$fond-color: rgba(190, 179, 105, 0.38);
+$color-link: #D5B572;
+$color-hover: #181818;
+$color-linkBG: #322c2c;
+
+/*============================*/
+/*      Small device first    */
+/*============================*/
+/* universal */
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+// CSS For links
+a {
+  color:$color-link;
+  &:hover {
+    background-color: $color-linkBG;
+    color: $color-hover;
+  }
+}
+//
+.menu-top {
+	line-height: 58px;
+}
+
+.menu-top .profile {
+	display: inline-block;
+	padding: 8px 10px;
+	line-height: 42px;
+}
+
+.menu-top .profile,
+.menu-side {
+	width: 300px;
+}
+
+.menu-top .profile img {
+	float: left;
+	margin-right: 1em;
+}
+
+//==============================
+// Navigation from small devices
+.sidebar-nav {
+  position: absolute;
+  display: block;
+  width: 100%;
+  // background-color: $fond-color;
+z-index: 1001;
+// height: 100%;
+// background: #373a47;
+}
+
+.navbar-brand{
+      color: $primary-color ;
+      font-weight: bold;
+      &:hover{ color: white;}
+}
+.navbar-toggle {
+  color: #fff;
+  background-color: $primary-color;
+}
+// position of left footer
+#bas {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: auto;
+      z-index: 5;
+      border: 3px solid #73AD21;
+}
+
+// font-awesome social link
+.fa-stack {
+   margin: -2px 0;
+   font-size:0.75em;
+   &:hover { color: white;}
+ }
+
+//==============================
+// Navigation to medium devices
+#main {
+  float: right;
+  max-width: 85%
+}
+
+//==============================
+// Navigation to medium devices
+@media (min-width: 699px) {
+  .sidebar-nav {
+    // display: block;
+    max-width: 15% ;
+    float: left;
+    background-color: $fond-color;
+  }
+  .sidebar-nav{
+       position: fixed;
+       left: 0;
+       top: 0;
+       height: 100%;
+       background: #687072;
+      //  background: rgb(70, 227, 166);
+
+       border-right: 2px solid #d6dce0;
+  }
+}
+#tasks, .deadline { padding-left: 15px; }
+
+.edit {
+  float: right;
+  padding-right: 10px;
+}
+//==============================
+// Todo App - TASKS
+#task-form { padding-bottom: 15px; }

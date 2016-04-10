@@ -7,18 +7,21 @@ Rails.application.routes.draw do
   get 'todo' => 'tasks#index'
   resources :tasks
 
+  devise_for :users
+
   get 'cv'  => 'element#show'
 
-  devise_for :users
-  root 'pages#index'
+  get 'about' => 'pages#about'
 
-  get 'pages/about'
+  get 'contact' => 'pages#contact'
 
   get 'projects' => 'projects#index'
 
   get 'projects/show'
 
   get 'link' => 'pages#link'
+
+  root 'pages#index'
 
   namespace :admin do
     resources :projects

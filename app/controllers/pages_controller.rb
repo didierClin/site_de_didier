@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   def about
   end
 
+  def contact
+  end
+
   def link
 
       url = "https://youtube.com/watch?v=" + params[:v]
