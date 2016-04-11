@@ -9,11 +9,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :contacts, only: [:new, :create]
+
   get 'cv'  => 'element#show'
 
   get 'about' => 'pages#about'
-
-  get 'contact' => 'pages#contact'
 
   get 'projects' => 'projects#index'
 
