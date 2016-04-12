@@ -1,10 +1,11 @@
 // Variables used along the site
 $font-stack:    Cinzel, sans-serif;
 $primary-color: #684020;
-$fond-color: rgba(190, 179, 105, 0.38);
-$color-link: #D5B572;
-$color-hover: #181818;
-$color-linkBG: #322c2c;
+$fond-color:    rgba(190, 179, 105, 0.38);
+$color-link:    #D5B572;
+$color-hover:   #181818;
+$color-linkBG:  #322c2c;
+$color_green:   #1cff94;
 
 /*============================*/
 /*      Small device first    */
@@ -14,25 +15,7 @@ $color-linkBG: #322c2c;
 body {
   // padding-top: 0;
   font: 100% $font-stack;
-  background-color: #1cff94;
-}
-
-// CSS For links
-// a {
-//   color:$color-link;
-//   &:hover {
-//     background-color: $color-linkBG;
-//     color: $color-hover;
-//   }
-// }
- /* Header */
-
-/* make sidebar nav vertical */
-
-.navbar-brand{
-      color: #1cff94;
-      font-weight: bold;
-      &:hover{ color: white;}
+  background-color: #ddd;
 }
 
 //==============================
@@ -45,18 +28,13 @@ body {
   	height: 100%;
     font-size: 2em;
   	background: #f5f7f9;
-  	padding: 7em 0 0 0;
+  	padding: 1em 0 0 0;
   	border-right: 1px solid #d6dce0;
-  	#logo {
-  		width: 40px;
-  		position: absolute;
-  		right: 3em;
-  		top: 3em;
-  	}
   	ul {
   		list-style: none;
   		text-align: right;
-  		padding-right: 3em;
+      // Align links to the right
+  		padding-right: 1em;
   		.category {
   			font-weight: 700;
   			font-size: 0.7em;
@@ -99,6 +77,13 @@ body {
   background-color: $primary-color;
 }
 
+//==============================
+// Navigation to medium devices
+#main {
+  float: right;
+  max-width: 85%
+}
+
 // position of left footer
 #bas {
   z-index: 101;
@@ -111,12 +96,14 @@ body {
   border: 1px solid #D5B572;
   p {
     margin-top: 1%;
+    padding-right: 1%;
     float: right;
+    font-size: 1.4em;
   }
   // font-awesome social link
   .fa-stack {
     margin:  1% 0;
-    font-size: 1em;
+    font-size: 1.5em;
     &:hover { color: white;}
   }
 }
@@ -137,7 +124,7 @@ body {
  }
 
  .jumbotron{
-   background-color: rgba(128, 167, 204, 0.6);
+   background-color: rgba(166, 174, 182, 0.6);
    padding-right: 10px;
  }
 
@@ -176,18 +163,20 @@ body {
  }
 
 @media (min-width: 768px) {
+  #main{
+    overflow: auto;
+    width: 100%;
+    }
   .icon-bar {
      color: #181818;
      font-family: 'Cinzel', serif;
    }
    .sidebar-nav{
         position: fixed;
-        float: left;
         left: 0;
         top: 0;
         height: 100%;
         background: #687072;
-       //  background: rgb(70, 227, 166);
         max-width: 15%;
         border-right: 2px solid #d6dce0;
    }
@@ -198,7 +187,7 @@ body {
    .sidebar-nav .navbar ul {
      float: none;
      // Separe head from first nav item
-     padding-top: 80px;
+     &:first-child { padding-top: 70px;}
    }
    .sidebar-nav .navbar ul:not {
      display: block;
@@ -207,7 +196,7 @@ body {
      float: none;
      display: block;
       font-weight: 700;
-      font-size: 0.8em;
+      font-size: 1em;
    }
    .sidebar-nav .navbar li a {
      padding-top: 12px;
@@ -219,11 +208,11 @@ body {
    }
    .fa-stack {
       margin:  20px 2px;
-      font-size: 1.5em;
+      font-size: 0.8em;
     }
 }
 /*=======================================
-   About
+   About page
    ====================================*/
 .mh-menu{
 	height: 385px;
@@ -232,16 +221,17 @@ body {
 	position: relative;
   li{
         list-style: none;
-        width: 300px;
+        width: 370px;
         a {
           display: block;
           width: 280px;
-          padding: 0px 10px;
+          padding: 0px 5px;
           text-align: right;
           position: relative;
           z-index: 10;
           height: 97px;
-          border-right: 1px solid #ddd;
+          color: #111;
+          border-right: 1px solid $color-link;
           background: rgba(255,255,255, 0.8);
           span{
           	display:block;
@@ -249,7 +239,7 @@ body {
           span:first-child{
           	font-weight: 700;
           	font-size: 16px;
-          	color: #ddd;
+          	color: $color-link;
           	padding-top: 10px;
           	font-family: 'Alegreya SC', Georgia, serif;
           }
@@ -282,7 +272,7 @@ body {
         	transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
         }
         &:hover img{
-                	left: 300px;
+                	left: 320px;
                 	opacity: 1;
                 }
   }

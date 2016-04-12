@@ -18,11 +18,11 @@
 
   <%= render 'layouts/partials/nav' %>
 
-  <%= render 'layouts/partials/flash' %>
 <!-- </div> -->
 <!-- <div class="col-sm-10 col-lg-10 clearfix"> -->
-  <!-- <%= render 'layouts/partials/header' %> -->
 <main id="main" class="container clearfix" role="main">
+    <%= render 'layouts/partials/header' %>
+    <%= render 'layouts/partials/flash' %>
     <%= yield %>
 </main>
 <!-- </div>
