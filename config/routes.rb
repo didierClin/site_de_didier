@@ -4,12 +4,12 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :contacts, only: [:new, :create]
+
   get 'todo' => 'tasks#index'
   resources :tasks
 
   devise_for :users
-
-  resources :contacts, only: [:new, :create]
 
   get 'cv'  => 'element#show'
 
