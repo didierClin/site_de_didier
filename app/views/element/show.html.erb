@@ -1,9 +1,12 @@
 <h1>Retrouvez mon CV</h1>
-
-<h3 id="monCV"><a href="http://didierclin.ovh/indexCV.html#/home">  Mon CV réalisé en AngularJS </a></h3>
-
+<h4>
+    <a class="" data-toggle="tooltip" title="lien vers mon CV sous AngularJS" data-placement="top" href="http://didierclin.ovh/indexCV.html#/home">
+        <i class="fa fa-external-link  fa-stack-2x">Mon CV réalisé en AngularJS</i>
+        <!-- <i class="fa fa-twitter fa-stack-1x"></i> -->
+    </a>
+</h4>
 <div class="row jumbotron">
-  <div class="col-md-1 lateral">
+  <div class="hidden-xs col-sm-1 lateral">
       F <br>O <br>R <br>M <br>A <br>T <br>I <br>O <br>N <br>
   </div>
   <div class="col-md-11">
@@ -11,18 +14,18 @@
       <% @formations.each do |f| %>
         <h2><%= f.fonction %> </h2>
         <div class="row thumbnail">
-          <div class="col-sm-3">
+          <div class="hidden-xs col-sm-3 imgin">
 
-              <%= image_tag f.image.url(:thumb), alt: f.fonction  %><br>
+              <%= image_tag f.image.url(:thumb), alt: f.fonction, class: 'img-responsive imgin'   %><br>
 
           </div>
-          <div class="col-sm-9">
+          <div class="col-xs-12 col-sm-9">
 
               <p>
 
-                  <%= f.entite %><br>
-                  <%= f.date %> <br>
-                  <%= f.description %>
+                <h2> <%= f.entite %><br> </h2>
+                <h3>  <%= f.date %> <br> </h3>
+                <h3><%= f.description %></h3>
 
               </p>
 
@@ -38,26 +41,25 @@
       E <br> X<br> P<br> E<br> R<br> I<br> E<br> N<br> C<br> E<br>/<br>
       P <br>R<br>O<br>F<br>E<br>S<br>S<br>I<br>O<br>N<br>N<br>E<br>L<br>L<br>E
   </div>
-  <div class="col-sm-10">
+  <div class="col-xs-12 col-sm-10">
 
       <% @ExpProfs.each do |exp| %>
       <h2><%= exp.fonction %> </h2>
-      <div class="row thumbnail">
-        <div class="col-sm-3">
+        <div class="row thumbnail">
+            <div class="hidden-xs col-sm-3 imgin">
 
-            <%= image_tag exp.image.url(:thumb), alt: exp.fonction  %><br>
+                <%= image_tag exp.image.url(:thumb), alt: exp.fonction, class: 'img-responsive imgin'  %><br>
 
-        </div>
-        <div class="col-sm-9">
-            <p>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <p>
 
-                  <%= exp.order %><br>
-                  <%= exp.fonction %> <br>
-                  <%= exp.date %> <br>
-                  <%= exp.description %>
-
-            </p>
-        </div>
+                    <h2><%= exp.fonction %> <br></h2>
+                    <h3>  <%= exp.date %> <br>
+                          <%= exp.description %>
+                    </h3>
+                </p>
+            </div>
         </div>
       <% end %>
 

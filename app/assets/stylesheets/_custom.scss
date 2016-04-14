@@ -1,7 +1,7 @@
 // Variables used along the site
 $font-stack:    Cinzel, sans-serif;
 $primary-color: #684020;
-$fond-color:    rgba(190, 179, 105, 0.38);
+$fond-color:    rgba(190, 179, 105, 0.88);
 $color-link:    #D5B572;
 $color-hover:   #181818;
 $color-linkBG:  #322c2c;
@@ -14,38 +14,47 @@ $color_green:   #1cff94;
 
 body {
   // padding-top: 0;
-  font: 100% $font-stack;
-  background-color: #ddd;
+  // background-color: #ddd;
   background-image: url(/images/body_bg.png);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
+h1 {font-family: 'Nunito', sans-serif;}
+h2 {
+  color: black;
+  font-family: 'Orbitron', sans-serif;
+}
+h3 {font-family: 'Oleo Script', cursive;}
 
 //==============================
 // Navigation from small devices
 .sidebar-nav {
-  	width: 200px;
+    font: 100% $font-stack;
+  	width: 100%;
+    height:0;
+    margin-bottom: 0;
   	position: fixed;
   	left: 0;
   	top: 0;
-  	height: 100%;
-    font-size: 2em;
-  	background: #f5f7f9;
+  	// height: 100%;
+    // font-size: 1.65em;
+  	background: #ff9;
   	padding: 1em 0 0 0;
   	border-right: 1px solid #d6dce0;
+    z-index: 91;
   	ul {
   		list-style: none;
   		text-align: right;
       // Align links to the right
-  		padding-right: 1em;
-  		.category {
-  			font-weight: 700;
-  			font-size: 0.7em;
-  			text-transform: uppercase;
-  			color: #33acb7;
-  		}
+  		padding-right: 0.8em;
+  		// .category {
+  		// 	font-weight: 700;
+  		// 	font-size: 0.7em;
+  		// 	text-transform: uppercase;
+  		// 	color: #33acb7;
+  		// }
   		li {
   			padding: .5em 0;
   			a {
@@ -73,20 +82,30 @@ body {
   }
 
 .navbar-brand{
+      display: none;
       color: $primary-color ;
       font-weight: bold;
       &:hover{ color: white;}
 }
 .navbar-toggle {
-  color: #fff;
-  background-color: $primary-color;
+  color: #9eafba;
+  background-color: $color-hover;
 }
+.navbar-nav { background-color: $color-hover;}
 
 //==============================
 // Navigation to medium devices
 #main {
-  float: right;
-  max-width: 85%
+  // float: right;
+  max-width: 100%;
+  font-family: 'Oleo Script', cursive;
+  padding-top:  50px;
+  padding-bottom:  120px;
+  .imgin {
+    height: 80%;
+    margin: 5% 0;
+  }
+  .panel { padding: 10px;}
 }
 
 // position of left footer
@@ -129,7 +148,7 @@ body {
  }
 
  .jumbotron{
-   background-color: rgba(166, 174, 182, 0.6);
+   background-color: rgba(166, 174, 182, 0.2);
    padding-right: 10px;
  }
 
@@ -147,13 +166,15 @@ body {
  .lateral {
    text-align: center;
    font-family: 'Cinzel', serif;
-   font-size: 2em;
-   color: green;
+   font-size: 3.8em;
+   color: $color-link;
    vertical-align: bottom;
-   text-shadow:  5px 5px 5px #888;
+   text-shadow:  5px 4px 5px #888;
  }
 
  .thumbnail {
+  //  margin: auto;
+  // margin: 0 10px;
    height: 320px;
    overflow: hidden;
    background-color: #f0f0f0;
@@ -167,10 +188,21 @@ body {
      position: relative
  }
 
+@media (min-width: 500px) {
+  .sidebar-nav {font-size: 1.75em;}
+  .navbar-brand {
+    // display: block;
+  }
+
+}
+
 @media (min-width: 768px) {
   #main{
     overflow: auto;
-    width: 100%;
+      float: right;
+      max-width: 85%;
+      padding-top: 2px;
+      padding-bottom:  60px;
     }
   .icon-bar {
      color: #181818;
@@ -183,7 +215,11 @@ body {
         height: 100%;
         background: #687072;
         max-width: 15%;
+        font-size: 2em;
         border-right: 2px solid #d6dce0;
+   }
+   .navbar-brand {
+     display: block;
    }
    .sidebar-nav .navbar .navbar-collapse {
      padding: 0;
@@ -201,7 +237,7 @@ body {
      float: none;
      display: block;
       font-weight: 700;
-      font-size: 1em;
+      font-size: 0.72em;
    }
    .sidebar-nav .navbar li a {
      padding-top: 12px;
@@ -211,6 +247,7 @@ body {
        color: #322c2c;
      }
    }
+   .navbar-nav { background-color: #687072;}
    .fa-stack {
       margin:  20px 2px;
       font-size: 0.8em;
@@ -233,7 +270,7 @@ body {
           padding: 0px 5px;
           text-align: right;
           position: relative;
-          z-index: 10;
+          z-index: 100;
           height: 97px;
           color: #111;
           border-right: 1px solid $color-link;
