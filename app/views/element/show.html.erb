@@ -1,15 +1,15 @@
-<h1>Retrouvez mon CV</h1>
+<h1>Parcourez mon CV</h1>
 <h4>
     <a class="" data-toggle="tooltip" title="lien vers mon CV sous AngularJS" data-placement="top" href="http://didierclin.ovh/indexCV.html#/home">
-        <i class="fa fa-external-link  fa-stack-2x">Mon CV réalisé en AngularJS</i>
+        <i class="fa fa-external-link  fa-stack-2x"></i>
         <!-- <i class="fa fa-twitter fa-stack-1x"></i> -->
     </a>
 </h4>
-<div class="row jumbotron">
-  <div class="hidden-xs col-sm-1 lateral">
+<div class="row">
+  <div class="hidden-xs col-sm-2 lateral">
       F <br>O <br>R <br>M <br>A <br>T <br>I <br>O <br>N <br>
   </div>
-  <div class="col-md-11">
+  <div class="col-xs-12 col-sm-10">
 
       <% @formations.each do |f| %>
         <h2><%= f.fonction %> </h2>
@@ -19,7 +19,7 @@
               <%= image_tag f.image.url(:thumb), alt: f.fonction, class: 'img-responsive imgin'   %><br>
 
           </div>
-          <div class="col-xs-12 col-sm-9">
+          <div class="col-xs-12 col-sm-8 col-md-8">
 
               <p>
 
@@ -35,9 +35,9 @@
 
   </div>
 </div>
-
-<div class="row jumbotron">
-  <div class="hidden-xs col-sm-1 lateral">
+<hr id="separation">
+<div class="row">
+  <div class="hidden-xs col-sm-2 lateral">
       E <br> X<br> P<br> E<br> R<br> I<br> E<br> N<br> C<br> E<br>/<br>
       P <br>R<br>O<br>F<br>E<br>S<br>S<br>I<br>O<br>N<br>N<br>E<br>L<br>L<br>E
   </div>

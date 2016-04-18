@@ -41,7 +41,7 @@ h3 {font-family: 'Oleo Script', cursive;}
   	// height: 100%;
     // font-size: 1.65em;
   	background: #ff9;
-  	padding: 1em 0 0 0;
+  	padding: 0 0 0 0;
   	border-right: 1px solid #d6dce0;
     z-index: 91;
   	ul {
@@ -79,6 +79,11 @@ h3 {font-family: 'Oleo Script', cursive;}
   		font-size: .8em;
   		color: #9eafba;
   	}
+    .icon-bar {
+      position: absolute;
+      top: 0;
+      background-color: $color-linkBG;
+    }
   }
 
 .navbar-brand{
@@ -174,8 +179,8 @@ h3 {font-family: 'Oleo Script', cursive;}
 
  .thumbnail {
   //  margin: auto;
-  // margin: 0 10px;
-   height: 320px;
+   margin-right:  10px;
+   height: auto;
    overflow: hidden;
    background-color: #f0f0f0;
    box-shadow:  5px 5px 5px #888;
@@ -252,6 +257,12 @@ h3 {font-family: 'Oleo Script', cursive;}
       margin:  20px 2px;
       font-size: 0.8em;
     }
+    .thumbnail {
+     //  margin: auto;
+      margin: 0 10px;
+      height: 320px;
+    }
+
 }
 /*=======================================
    About page
