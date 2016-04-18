@@ -9,7 +9,7 @@
           <div class="thumbnail">
               <%= image_tag project.image.url(:thumb), alt: project.title %>
               <div class="caption">
-                <h2 class="center"> <%= project.title %></h2>
+                <h2 class="center"> <%= truncate(project.title, length: 10) %></h2>
                 <p> <%= truncate(project.description, length: 80) %> </p>
                 <p><%= link_to  icon('link', class: "fa-2x"),   projects_path(project.slug), class: "btn btn-primary", role: "button" %>
                    <a href="<%= project.link %>" title: "mon titre"> <%= icon('github', class: "fa-2x btn btn-primary", role: "button" ) %>  </a></p>

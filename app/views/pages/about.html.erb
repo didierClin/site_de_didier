@@ -1,18 +1,18 @@
-<h1>La page About!</h1>
+<h1>Bienvenue!</h1>
 <ul class="mh-menu">
   <li>
-    <a href="indexCV.html">
-      <span>Mon CV</span>
-      <span>Accedez à mon CV sous AngularJS</span>
-    </a>
+      <%= link_to  cv_path do %>
+        <span>Mon CV</span>
+        <span>Accedez à mon CV </span>
+      <% end %>
     <img src="images/1.jpg" alt="photo de didier" />
   </li>
   <li>
-    <a href="http://larmoireencarton.fr/indx.html">
+    <%= link_to projects_path do %>
       <span>Réalisations</span>
-      <span>Exemple de page sous AngularJS </span>
-    </a>
-    <img src="images/2.jpg" alt="une realisation sous angular" />
+      <span>Découvrez mon PortFolio </span>
+    <% end %>
+    <img src="images/2.jpg" alt="mes realisations" />
   </li>
   <li>
     <a href="liens.html">

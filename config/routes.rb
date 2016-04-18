@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   get 'link' => 'pages#link'
 
-  root 'pages#index'
+  root 'pages#about'
 
   namespace :admin do
     resources :projects

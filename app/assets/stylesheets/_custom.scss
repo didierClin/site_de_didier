@@ -1,11 +1,11 @@
 // Variables used along the site
 $font-stack:    Cinzel, sans-serif;
-$primary-color: #684020;
-$fond-color:    rgba(190, 179, 105, 0.88);
-$color-link:    #D5B572;
-$color-hover:   #181818;
-$color-linkBG:  #322c2c;
-$color_green:   #1cff94;
+$primary-color: #684020;  //marron foncé
+$fond-color:    rgba(190, 179, 105, 0.88); //vert kaki clair
+$color-link:    #D5B572; //marron or
+$color-hover:   #181818;  // noir
+$color-linkBG:  #322c2c;  //gris anthra
+$color_green:   #1cff94;  //vert fluo
 
 /*============================*/
 /*      Small device first    */
@@ -15,11 +15,11 @@ $color_green:   #1cff94;
 body {
   // padding-top: 0;
   // background-color: #ddd;
-  background-image: url(/images/body_bg.png);
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url(/images/body_bg.png);
+  // background-position: center;
+  // background-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-size: cover;
 }
 h1 {font-family: 'Nunito', sans-serif;}
 h2 {
@@ -116,13 +116,14 @@ h3 {font-family: 'Oleo Script', cursive;}
 // position of left footer
 #bas {
   z-index: 101;
+  margin: 0;
   background-color: #000;
   display: inline;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  border: 1px solid #D5B572;
+  border: 1px solid $color-link;
   p {
     margin-top: 1%;
     padding-right: 1%;
@@ -133,6 +134,7 @@ h3 {font-family: 'Oleo Script', cursive;}
   .fa-stack {
     margin:  1% 0;
     font-size: 1.5em;
+    // color: $color_green;
     &:hover { color: white;}
   }
 }
@@ -167,18 +169,21 @@ h3 {font-family: 'Oleo Script', cursive;}
    }
  }
 
+hr { color: $primary-color;}
  /* title letters for CV page */
  .lateral {
+   margin-top: 20px;
    text-align: center;
    font-family: 'Cinzel', serif;
    font-size: 3.8em;
    color: $color-link;
-   vertical-align: bottom;
+  //  vertical-align: bottom;
    text-shadow:  5px 4px 5px #888;
  }
 
  .thumbnail {
   //  margin: auto;
+   margin-top: 10px;
    margin-right:  10px;
    height: auto;
    overflow: hidden;
@@ -196,14 +201,14 @@ h3 {font-family: 'Oleo Script', cursive;}
 @media (min-width: 500px) {
   .sidebar-nav {font-size: 1.75em;}
   .navbar-brand {
-    // display: block;
+    display: block;
   }
 
 }
 
 @media (min-width: 768px) {
   #main{
-    overflow: auto;
+    // overflow: auto;
       float: right;
       max-width: 85%;
       padding-top: 2px;
@@ -247,9 +252,9 @@ h3 {font-family: 'Oleo Script', cursive;}
    .sidebar-nav .navbar li a {
      padding-top: 12px;
      padding-bottom: 12px;
-     color: #D5B572;
+     color: $color-link;
      &:hover {
-       color: #322c2c;
+       color: $color-linkBG;
      }
    }
    .navbar-nav { background-color: #687072;}
@@ -259,7 +264,10 @@ h3 {font-family: 'Oleo Script', cursive;}
     }
     .thumbnail {
      //  margin: auto;
-      margin: 0 10px;
+    //  background-image:linear-gradient(white, black);
+    //  background-image:linear-gradient(60deg, white, black);
+     background-image:radial-gradient(white, black);
+      margin: 10px 10px;
       height: 320px;
     }
 
@@ -270,7 +278,7 @@ h3 {font-family: 'Oleo Script', cursive;}
 .mh-menu{
 	height: 385px;
 	width: 500px;
-	margin: 20px auto;
+	margin: 15% auto;
 	position: relative;
   li{
         list-style: none;

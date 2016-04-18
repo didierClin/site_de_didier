@@ -1,11 +1,12 @@
+<h1>Vous pouvez me laisser un message:</h1>
 <% content_for :title do %>Contact<% end %>
 <h3>Contact</h3>
 <div class="form">
   <%= simple_form_for @contact do |form| %>
     <%= form.error_notification %>
-    <%= form.input :name, autofocus: true %>
+    <%= form.input :name, autofocus: true, label: "Nom" %>
     <%= form.input :email %>
-    <%= form.input :content, as: :text %>
-    <%= form.button :submit, 'Submit', class: 'submit' %>
+    <%= form.input :content, as: :text, label: "Message" %>
+    <%= form.button :submit, 'Envoyer', class: 'submit' %>
   <% end %>
 </div>
